@@ -1,0 +1,47 @@
+:root {
+  --mainColor: #182c21;
+  --textColor: white;
+  --lightColor: #e0d8c2;
+  --mainGold: #C5A363;
+}
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
+body {
+  /* background-color: var(--mainColor); */
+  background-image: url('/home/back.jpg');
+  background-repeat: repeat; 
+  background-size: 30%;
+  background-position: top left; 
+}
+
+
+::selection {
+    background-color: rgba(224, 216, 194, 0.6);
+    color: var(--mainColor);
+}
+
+.text-header {
+  font-size: 49px;
+}
+
+.text-large {
+  font-size: 38px;
+}
+
+
+.swiper-pagination-bullet {
+  background: var(--mainColor) !important;
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  margin-top: 15px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--mainColor) !important;
+  width: 12px;
+  height: 12px;
+}

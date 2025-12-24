@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+  @keyframes zoom-in-out {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.95;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+  }
+
+  .animate-zoom-smooth {
+    animation: zoom-in-out 8s ease-in-out infinite;
+  }
+}
+
+@layer components {
+  .heading {
+    @apply text-xl sm:text-2xl md:text-5xl;
+  }
+  .heading-1 {
+    @apply text-xl sm:text-2xl md:text-4xl;
+  }
+  .heading-2 {
+    @apply text-xl font-semibold  md:text-2xl;
+  }
+  .paragraph {
+    @apply leading-relaxed text-sm sm:text-base md:text-lg
+  }
+  .btn-boder-white {
+    @apply px-6 py-3 bg-mainColor border border-lightColor hover:bg-lightColor hover:text-mainColor hover:border-mainColor transition duration-300 rounded-full
+  }
+
+  .btn-boder-blue {
+    @apply px-6 py-3 border-2 border-mainColor text-mainColor hover:bg-mainColor hover:text-white hover:border-lightColor transition duration-300
+  }
+}
+
+/* Hide horizontal scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.crack-card {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.crack-card * {
+  position: relative;
+  z-index: 2; /* ← يحافظ على النص فوق الشرخ */
+}
+
+.crack-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/home/thumbnail2.png") center/65% no-repeat;
+  opacity: 0;
+  transform: scale(1.2);
+  transition: opacity 0.4s ease, transform 0.5s ease;
+  z-index: 0; /* ← يخلي الشرخ تحت الكلام */
+}
+
+
+.crack-card:hover::after {
+  opacity: 0.2;
+  transform: scale(1);
+}
