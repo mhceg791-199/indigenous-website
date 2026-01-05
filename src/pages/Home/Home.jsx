@@ -1,8 +1,12 @@
+import { lazy, Suspense } from "react";
 import OverviewSection from "../../components/shared/Overview/Overview";
 import FeatherVideo from "../../components/home/FeatherVideo/FeatherVideo";
 import FeatherBanner from "../../components/home/FeatherBanner/FeatherBanner";
-import HeroNeuralSection from "../../components/home/HeroNeural/HeroNeural";
 import WhatWeDo from "../../components/home/WhatWeDo/WhatWeDo";
+// import HeroNeuralSection from "../../components/home/HeroNeural/HeroNeural";
+const HeroNeuralSection = lazy(() =>
+  import("../../components/home/HeroNeural/HeroNeural")
+);
 
 function Home() {
   return (
@@ -11,7 +15,10 @@ function Home() {
       <OverviewSection />
       <WhatWeDo/>
       <FeatherBanner />
-      <HeroNeuralSection />
+      <Suspense fallback={null}>
+        <HeroNeuralSection />
+      </Suspense>
+      {/* <HeroNeuralSection /> */}
     </>
   );
 }

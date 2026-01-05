@@ -37,6 +37,8 @@ function Layout({ children }) {
           <img
             className="w-1/2 md:w-1/4 transition-all duration-300"
             src={navbarWhite ? logo : logo2}
+            decoding="async"
+            fetchpriority="high"
             alt="Indigenous Mosaic"
           />
         </Link>
