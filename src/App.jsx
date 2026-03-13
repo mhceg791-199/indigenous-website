@@ -1,25 +1,25 @@
-// import "./App.css";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+import "./App.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-// import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
-// import Home from "./pages/Home/Home";
-// import Layout from "./Layout";
-// import About from "./pages/about/about";
+import Home from "./pages/Home/Home";
+import Layout from "./Layout";
+import About from "./pages/about/about";
 // import Projects from "./pages/projects/projects";
-// import ProjectsDetails from "./pages/projectsDetails/projectsDetails";
-// import ScrollToTopButton from "./components/shared/ScrollToTopButton/ScrollToTopButton";
-// import Services from "./pages/Services/Services";
-// import Career from "./pages/Career/Career";
-// import ContactUs from "./pages/ContactUs/ContactUs";
-// import Terms from "./pages/Terms/Terms";
-// import Privacy from "./pages/Privacy/Privacy";
+import ProjectsDetails from "./pages/projectsDetails/projectsDetails";
+import ScrollToTopButton from "./components/shared/ScrollToTopButton/ScrollToTopButton";
+import Services from "./pages/Services/Services";
+import Career from "./pages/Career/Career";
+import ContactUs from "./pages/ContactUs/ContactUs";
+import Terms from "./pages/Terms/Terms";
+import Privacy from "./pages/Privacy/Privacy";
 
 function App() {
   return (
     <>
-      {/* <Routes>
+      <Routes>
         <Route
           path="/*"
           element={
@@ -38,8 +38,8 @@ function App() {
           }
         />
       </Routes>
-      <ScrollToTopButton /> */}
-      <div
+      <ScrollToTopButton />
+      {/* <div
       style={{
         height: "100vh",
         display: "flex",
@@ -48,8 +48,8 @@ function App() {
         backgroundColor: "#ffffff",
       }}
     >
-      {/* صفحة بيضاء فاضية */}
-    </div>
+     
+    </div> */}
     </>
   );
 }
