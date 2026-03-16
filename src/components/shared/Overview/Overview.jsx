@@ -137,8 +137,15 @@ export default function OverviewSection() {
           </span>
 
           <p className="mt-6 paragraph font-medium text-gray-500">
-            Born from the Partnership between Chiniki Group of Companies (First
-            Nation) and{" "}
+            Born from the Partnership between{" "}
+            <Link
+              className="font-bold"
+              to="https://www.chinikigroup.com/"
+              target="_blank"
+            >
+              Chiniki Group of Companies
+            </Link>
+            {" "}(First Nation) and{" "}
             <Link
               className="font-bold"
               to="https://mosaicholding.com/"
@@ -149,7 +156,7 @@ export default function OverviewSection() {
           </p>
 
           <p className="mt-6 text-mainColor paragraph leading-relaxed">
-            Indigenous Mosaic Company is a Canada-based project leadership and
+            Indigenous Mosaic Company is a Canada-based project management and
             development platform bringing together Indigenous stewardship,
             strategic coordination, and global expertise to guide complex
             developments. By uniting the vision of Chiniki with the
