@@ -37,7 +37,7 @@ export default function FeatherVideo() {
           WebkitMaskSize: "5000px",
           maskSize: "5000px",
           ease: "none",
-        }
+        },
       )
         /* اختفاء الريشة بعد ما تثبت */
         .to(
@@ -47,7 +47,7 @@ export default function FeatherVideo() {
             maskImage: "none",
             duration: 0.01,
           },
-          ">"
+          ">",
         );
 
       /* ================= SLIDER 1 ================= */
@@ -55,7 +55,7 @@ export default function FeatherVideo() {
         text1Ref.current,
         { opacity: 0, y: 40 },
         { opacity: 1, y: 0, duration: 0.4 },
-        0
+        0,
       ).to(text1Ref.current, { opacity: 0, y: -40, duration: 0.4 }, 0.6);
 
       /* ================= SLIDER 2 ================= */
@@ -63,7 +63,7 @@ export default function FeatherVideo() {
         text2Ref.current,
         { opacity: 0, y: 40 },
         { opacity: 1, y: 0, duration: 0.4 },
-        0.8
+        0.8,
       ).to(text2Ref.current, { opacity: 0, y: -40, duration: 0.4 }, 1.4);
 
       /* ================= SLIDER 3 ================= */
@@ -71,7 +71,7 @@ export default function FeatherVideo() {
         text3Ref.current,
         { opacity: 0, y: 40 },
         { opacity: 1, y: 0, duration: 0.6 },
-        1.6
+        1.6,
       );
     }, sectionRef);
 
@@ -107,10 +107,8 @@ export default function FeatherVideo() {
 
       {/* ================= TEXT LAYER ================= */}
       {/* <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none"> */}
-        <div className="absolute inset-0 z-10 flex items-start justify-center pointer-events-none pt-80 md:pt-80">
-
+      <div className="absolute inset-0 z-10 flex items-start justify-center pointer-events-none pt-80 md:pt-80">
         <div className="relative w-full max-w-[760px] text-center px-6">
-
           {/* ===== SLIDER 1 ===== */}
           <div ref={text1Ref} className="absolute inset-0">
             <h1 className="text-mainGold text-4xl md:text-6xl font-bold mb-6 tracking-tight">
@@ -119,8 +117,8 @@ export default function FeatherVideo() {
               SHAPES INNOVATION
             </h1>
             <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
-              A new model of architecture and engineering, rooted in Indigenous
-              knowledge and built for the future.
+              A new model of project leadership rooted in Indigenous knowledge
+              and built to guide transformative developments for the future.
             </p>
           </div>
 
@@ -132,8 +130,8 @@ export default function FeatherVideo() {
               WITH PURPOSE
             </h1>
             <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
-              Blending cultural intelligence, advanced engineering, and
-              sustainable systems to create places that last.
+              Blending cultural intelligence, strategic coordination, and
+              integrated delivery to bring meaningful developments to life.
             </p>
           </div>
 
@@ -145,11 +143,11 @@ export default function FeatherVideo() {
               DRIVEN BY VISION.
             </h1>
             <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
-              World-class A&amp;E and EPCM solutions shaped by stewardship,
-              community, and global ambition.
+              Project leadership shaped by stewardship, collaboration, and a
+              commitment to creating lasting impact for communities and
+              partners.
             </p>
           </div>
-
         </div>
       </div>
     </section>

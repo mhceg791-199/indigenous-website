@@ -10,7 +10,7 @@ import About from "./pages/about/about";
 // import Projects from "./pages/projects/projects";
 import ProjectsDetails from "./pages/projectsDetails/projectsDetails";
 import ScrollToTopButton from "./components/shared/ScrollToTopButton/ScrollToTopButton";
-import Services from "./pages/Services/Services";
+// import Services from "./pages/Services/Services";
 import Career from "./pages/Career/Career";
 import ContactUs from "./pages/ContactUs/ContactUs";
 import Terms from "./pages/Terms/Terms";
@@ -27,7 +27,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="about" element={<About />} />
-                <Route path="services" element={<Services />} />
+                {/* <Route path="services" element={<Services />} /> */}
                 <Route path="projects/:slug" element={<ProjectsDetails />} />
                 <Route path="career" element={<Career />} />
                 <Route path="contact-us" element={<ContactUs />} />

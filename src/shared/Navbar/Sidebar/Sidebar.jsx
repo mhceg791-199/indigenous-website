@@ -127,7 +127,7 @@ export function SidebarWithBurgerMenu() {
               </ListItem>
             </Accordion>
 
-            <Accordion open={open === 1}>
+            {/* <Accordion open={open === 1}>
               {" "}
               <ListItem
                 className={`p-0 item hover:bg-transparent mainItem ${
@@ -158,7 +158,9 @@ export function SidebarWithBurgerMenu() {
                   </Typography>
                 </AccordionHeader>
               </ListItem>
-            </Accordion>
+            </Accordion> */}
+
+            {/* //////////////////////////////////////////////////////////////// */}
 
             {/* <Accordion open={open === 1}>
               {" "}

@@ -38,21 +38,21 @@ export default function VisionMissionSection() {
           rotate: 0,
           duration: 2,
           ease: "power1.out",
-        }
+        },
       );
 
       tl.fromTo(
         visionRef.current,
         { x: -60, opacity: 0 },
         { x: 0, opacity: 1, duration: 1, ease: "power1.out" },
-        "<0.2"
+        "<0.2",
       );
 
       tl.fromTo(
         missionRef.current,
         { x: 60, opacity: 0 },
         { x: 0, opacity: 1, duration: 1, ease: "power1.out" },
-        "<"
+        "<",
       );
 
       /* ===== Idle floating (continuous) ===== */
@@ -80,10 +80,10 @@ export default function VisionMissionSection() {
         <div ref={visionRef} className="text-center md:text-right">
           <h3 className="text-3xl font-semibold text-mainGold mb-4">Vision</h3>
           <p className="text-gray-800 leading-relaxed">
-            To redefine how the world designs and builds — by blending heritage,
-            creativity, and technology into every project we touch. We envision
-            a future where modern infrastructure and Indigenous identity coexist
-            in perfect balance.
+            To redefine how complex projects are guided and realized — blending
+            heritage, creativity, and innovation into every initiative we lead.
+            We envision a future where modern progress and Indigenous identity
+            move forward in balance.
           </p>
         </div>
 
@@ -104,9 +104,9 @@ export default function VisionMissionSection() {
         <div ref={missionRef} className="text-center md:text-left">
           <h3 className="text-3xl font-semibold text-mainGold mb-4">Mission</h3>
           <p className="text-gray-800 leading-relaxed">
-            To engineer spaces and systems that honour the land, empower
-            communities, and inspire growth — merging cultural integrity with
-            cutting-edge design and execution.
+            To lead and coordinate projects that honour the land, empower
+            communities, and create lasting value — aligning cultural integrity
+            with global expertise and purposeful project management.
           </p>
         </div>
       </div>

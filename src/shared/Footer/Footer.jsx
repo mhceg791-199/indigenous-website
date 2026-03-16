@@ -5,14 +5,15 @@ import logo from "../../assets/logo/logo2.webp";
 // 62 * 59
 const linksTop = [
   { to: "/about", label: "About" },
-  { to: "/services", label: "Services" },
+  // { to: "/services", label: "Services" },
   // { to: "/projects", label: "Projects" },
   { to: "/career", label: "Careers" },
+  { to: "/contact-us", label: "Contact Us" },
   // { to: "/News", label: "News" },
 ];
 
 const linksBottom = [
-  { to: "/contact-us", label: "Contact Us" },
+  // { to: "/contact-us", label: "Contact Us" },
   { to: "/privacy", label: "Privacy Policy" },
   { to: "/terms", label: "Terms & Conditions" },
 ];

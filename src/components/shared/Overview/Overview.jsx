@@ -1,6 +1,7 @@
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
 // import feather from "/feather-icon.svg";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -26,7 +27,7 @@ export default function OverviewSection() {
             trigger: sectionRef.current,
             start: "top 70%",
           },
-        }
+        },
       );
 
       // Items animation
@@ -43,7 +44,7 @@ export default function OverviewSection() {
             trigger: sectionRef.current,
             start: "top 65%",
           },
-        }
+        },
       );
     }, sectionRef);
 
@@ -137,14 +138,24 @@ export default function OverviewSection() {
 
           <p className="mt-6 paragraph font-medium text-gray-500">
             Born from the Partnership between Chiniki Group of Companies (First
-            Nation) and Mosaic Holding Corporation
+            Nation) and{" "}
+            <Link
+              className="font-bold"
+              to="https://mosaicholding.com/"
+              target="_blank"
+            >
+              Mosaic Holding Corporation
+            </Link>
           </p>
 
           <p className="mt-6 text-mainColor paragraph leading-relaxed">
-            Indigenous Mosaic Company is a Canada-based Architecture,
-            Engineering, and EPCM firm redefining how Indigenous heritage and
-            modern design converge to build sustainable communities across North
-            America and beyond.
+            Indigenous Mosaic Company is a Canada-based project leadership and
+            development platform bringing together Indigenous stewardship,
+            strategic coordination, and global expertise to guide complex
+            developments. By uniting the vision of Chiniki with the
+            international capabilities of Mosaic Holding Corporation, Indigenous
+            Mosaic works to advance sustainable communities and transformative
+            projects across North America and beyond.
           </p>
 
           <div className="mt-10">

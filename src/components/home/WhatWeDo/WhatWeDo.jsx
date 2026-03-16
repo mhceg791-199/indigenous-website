@@ -2,13 +2,21 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 // المحتوى الخاص بك
 const services = [
+  // {
+  //   title: "Architecture & Design",
+  //   desc: "Creating spaces that reflect identity, belonging, and progress.",
+  // },
+  // {
+  //   title: "Engineering & EPCM Delivery",
+  //   desc: "Precision-driven systems that turn vision into reality sustainably, efficiently, and beautifully.",
+  // },
   {
-    title: "Architecture & Design",
-    desc: "Creating spaces that reflect identity, belonging, and progress.",
+    title: "Project Leadership & Development Management",
+    desc: "Guiding complex developments from vision to delivery through integrated planning, coordination, and oversight.",
   },
   {
-    title: "Engineering & EPCM Delivery",
-    desc: "Precision-driven systems that turn vision into reality sustainably, efficiently, and beautifully.",
+    title: "Strategic Delivery & Project Coordination",
+    desc: "Aligning partners, resources, and expertise to ensure projects move forward efficiently, responsibly, and with lasting impact.",
   },
   {
     title: "Innovation & Technology",
@@ -22,13 +30,13 @@ const services = [
 
 // أيقونة الريشة SVG
 const FeatherIcon = ({ className }) => (
-  <svg 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    className={className} 
-    strokeWidth="1.2" 
-    strokeLinecap="round" 
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    className={className}
+    strokeWidth="1.2"
+    strokeLinecap="round"
     strokeLinejoin="round"
   >
     <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" />
@@ -70,9 +78,11 @@ const ServiceItem = ({ item, index }) => {
         <p className="text-mainColor leading-relaxed text-base md:text-lg font-light">
           {item.desc}
         </p>
-        
+
         {/* خط ديكوري صغير تحت كل خدمة */}
-        <div className={`mt-6 h-[1px] w-12 bg-[#C5A363]/30 inline-block ${index % 2 === 0 ? "md:float-right" : "md:float-left"}`} />
+        <div
+          className={`mt-6 h-[1px] w-12 bg-[#C5A363]/30 inline-block ${index % 2 === 0 ? "md:float-right" : "md:float-left"}`}
+        />
       </div>
     </motion.div>
   );
@@ -80,16 +90,15 @@ const ServiceItem = ({ item, index }) => {
 
 export default function WhatWeDoSection() {
   const { scrollYProgress } = useScroll();
-  
+
   // حركة الريشة المائية في الخلفية
   const featherY = useTransform(scrollYProgress, [0, 1], [0, -150]);
   const featherRotate = useTransform(scrollYProgress, [0, 1], [0, 20]);
 
   return (
     <section className="relative py-12 bg-white text-gray-900 overflow-hidden font-sans">
-      
       {/* ريشة مائية ضخمة في الخلفية */}
-      <motion.div 
+      <motion.div
         style={{ y: featherY, rotate: featherRotate }}
         className="absolute right-[-10%] top-[10%] opacity-[0.04] pointer-events-none select-none z-0"
       >
@@ -101,25 +110,25 @@ export default function WhatWeDoSection() {
 
       {/* ===== Header ===== */}
       <div className="relative z-10 max-w-4xl mx-auto text-center px-6 mb-14">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           className="flex justify-center items-center gap-3 mb-6"
         >
-           <span className="uppercase tracking-widest text-sm text-mainGold">
+          <span className="uppercase tracking-widest text-sm text-mainGold">
             What We Do
-           </span>
+          </span>
         </motion.div>
 
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
           className="mt-6 paragraph font-medium text-gray-500"
         >
           Each project we touch is more than infrastructure — it’s a living
-          story built on creativity, cultural intelligence, and
-          purpose-driven innovation.
+          story built on creativity, cultural intelligence, and purpose-driven
+          innovation.
         </motion.p>
       </div>
 
@@ -165,14 +174,14 @@ export default function WhatWeDoSection() {
 
 // // مكون أيقونة الريشة SVG (لمسة اللوجو)
 // const FeatherIcon = ({ className, style }) => (
-//   <svg 
-//     viewBox="0 0 24 24" 
-//     fill="none" 
-//     stroke="currentColor" 
-//     className={className} 
+//   <svg
+//     viewBox="0 0 24 24"
+//     fill="none"
+//     stroke="currentColor"
+//     className={className}
 //     style={style}
-//     strokeWidth="1.5" 
-//     strokeLinecap="round" 
+//     strokeWidth="1.5"
+//     strokeLinecap="round"
 //     strokeLinejoin="round"
 //   >
 //     <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" />
@@ -194,8 +203,8 @@ export default function WhatWeDoSection() {
 //     >
 //       {/* أيقونة الريشة كـ Marker في المنتصف */}
 //       <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-10 h-10 items-center justify-center rounded-full bg-white border border-[#C5A363] shadow-sm z-20">
-//         <FeatherIcon 
-//           className="w-5 h-5 text-[#C5A363]" 
+//         <FeatherIcon
+//           className="w-5 h-5 text-[#C5A363]"
 //           style={{ transform: index % 2 === 0 ? 'rotate(0deg)' : 'rotate(180deg) scaleX(-1)' }}
 //         />
 //       </div>
@@ -213,7 +222,7 @@ export default function WhatWeDoSection() {
 //         <p className="text-gray-500 leading-relaxed text-lg font-light">
 //           {item.desc}
 //         </p>
-        
+
 //         {/* خط بسيط تحت المحتوى */}
 //         <div className={`mt-6 h-[2px] w-12 bg-gray-100 inline-block ${index % 2 === 0 ? "md:float-right" : "md:float-left"}`} />
 //       </div>
@@ -223,7 +232,7 @@ export default function WhatWeDoSection() {
 
 // export default function WhatWeDoSection() {
 //   const { scrollYProgress } = useScroll();
-  
+
 //   // تأثير حركة الريشة الخلفية بناءً على السكرول
 //   const featherY = useTransform(scrollYProgress, [0, 1], [0, -150]);
 //   const featherRotate = useTransform(scrollYProgress, [0, 1], [0, 15]);
@@ -233,7 +242,7 @@ export default function WhatWeDoSection() {
 //       className="relative py-32 bg-white text-gray-900 overflow-hidden"
 //     >
 //       {/* ريشة كبيرة جداً في الخلفية كعلامة مائية متحركة */}
-//       <motion.div 
+//       <motion.div
 //         style={{ y: featherY, rotate: featherRotate }}
 //         className="absolute right-[-10%] top-[10%] opacity-[0.03] pointer-events-none select-none z-0"
 //       >
@@ -242,7 +251,7 @@ export default function WhatWeDoSection() {
 
 //       {/* ===== Header ===== */}
 //       <div className="relative z-10 max-w-4xl mx-auto text-center px-6 mb-28">
-//         <motion.div 
+//         <motion.div
 //           initial={{ opacity: 0, y: 20 }}
 //           whileInView={{ opacity: 1, y: 0 }}
 //           viewport={{ once: true }}
@@ -255,7 +264,7 @@ export default function WhatWeDoSection() {
 //            <div className="h-[1px] w-12 bg-[#C5A363]" />
 //         </motion.div>
 
-//         <motion.h2 
+//         <motion.h2
 //           initial={{ opacity: 0, y: 20 }}
 //           whileInView={{ opacity: 1, y: 0 }}
 //           viewport={{ once: true }}
@@ -265,7 +274,7 @@ export default function WhatWeDoSection() {
 //           ماذا <span className="font-bold border-b-4 border-[#C5A363]">نقدم</span>
 //         </motion.h2>
 
-//         <motion.p 
+//         <motion.p
 //           initial={{ opacity: 0 }}
 //           whileInView={{ opacity: 1 }}
 //           viewport={{ once: true }}
@@ -289,7 +298,7 @@ export default function WhatWeDoSection() {
 //       </div>
 
 //       {/* لمسة فنية أخيرة: ريشة صغيرة في أسفل القسم */}
-//       <motion.div 
+//       <motion.div
 //         initial={{ opacity: 0, scale: 0.5 }}
 //         whileInView={{ opacity: 0.2, scale: 1 }}
 //         className="flex justify-center mt-32"
