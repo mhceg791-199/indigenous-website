@@ -37,7 +37,7 @@
     @apply px-6 py-3 bg-mainColor border border-lightColor hover:bg-lightColor hover:text-mainColor hover:border-mainColor transition duration-300 rounded-full
   }
 
-  .btn-boder-blue {
+  .btn-boder-dark {
     @apply px-6 py-3 border-2 border-mainColor text-mainColor hover:bg-mainColor hover:text-white hover:border-lightColor transition duration-300
   }
 }
