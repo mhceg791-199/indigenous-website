@@ -59,13 +59,13 @@ export default function ContactForm() {
       <div className="w-full h-full flex items-center justify-center">
         <form
           onSubmit={handleSubmit}
-          className="w-full bg-mainColor backdrop-blur-lg border border-white/10 rounded-2xl p-8 text-white"
+          className="w-full bg-mainColor backdrop-blur-lg border-8 border-white/10  p-8 text-white"
         >
-          <h2 className="heading mb-6 font-medium text-lightColor">
+          <h2 className="heading mb-3 font-medium text-lightColor">
             <SectionHeader firstWord="Get in Touch" />
           </h2>
 
-          <div className="mb-6">
+          <div className="mb-4">
             <label className="block text-lightColor text-sm font-bold mb-2 paragraph">
               Your Name
             </label>
@@ -80,7 +80,7 @@ export default function ContactForm() {
             />
           </div>
 
-          <div className="mb-6">
+          <div className="mb-4">
             <label className="block text-lightColor text-sm font-bold mb-2 paragraph">
               Your Email
             </label>
@@ -95,13 +95,13 @@ export default function ContactForm() {
             />
           </div>
 
-          <div className="mb-8">
+          <div className="mb-6">
             <label className="block text-lightColor text-sm font-bold mb-2 paragraph">
               Your Message
             </label>
             <textarea
               name="message"
-              rows="3"
+              rows="4"
               value={form.message}
               onChange={handleChange}
               required
