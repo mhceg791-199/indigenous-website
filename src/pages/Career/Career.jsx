@@ -1,4 +1,4 @@
-import OurValues from "../../components/about/OurValues/OurValues";
+import ApplicationForm from "../../components/Career/ApplicationForm/ApplicationForm";
 import DomeGallery from "../../components/Career/DomeGallery/DomeGallery";
 import ReadyToJoin from "../../components/Career/ReadyToJoin/ReadyToJoin";
 import DescriptionAbout from "../../components/shared/DescriptionAbout/DescriptionAbout";
@@ -21,8 +21,8 @@ function Career() {
         particleColors={["#e0d8c2", "#e0d8c2"]}
         height="h-[20vh] md:h-[40vh]"
       />
-      <OurValues />
       <ReadyToJoin />
+      <ApplicationForm/>
     </>
   );
 }
